@@ -30,7 +30,7 @@ void insertion_sort(vector<long long>& a) {
 int main() {
     clock_t start, finish;
     double est;
-    ifstream inputFile("inputs_500K.txt");
+    ifstream inputFile("inputs_1M.txt");
     if (!inputFile.is_open()) {
         cerr << "Error opening file 'inputs.txt'" << endl;
         return 1;

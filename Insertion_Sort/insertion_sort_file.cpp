@@ -1,8 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <vector>
-#include <ctime>
-
+#include <bits/stdc++.h>
 using namespace std;
 
 void printarr(const vector<int>& a) {
@@ -13,10 +9,7 @@ void printarr(const vector<int>& a) {
 }
 
 void insertion_sort(vector<long long>& a) {
-    long long count = 0;
     for (long long i = 1; i < a.size(); ++i) {
-        count++;
-        cout << count << " sorted" << endl;
         long long key = a[i];
         long long j = i - 1;
         while (j >= 0 && a[j] > key) {
@@ -30,9 +23,9 @@ void insertion_sort(vector<long long>& a) {
 int main() {
     clock_t start, finish;
     double est;
-    ifstream inputFile("inputs_1M.txt");
+    ifstream inputFile("inputs_100Kdes.txt");
     if (!inputFile.is_open()) {
-        cerr << "Error opening file 'inputs.txt'" << endl;
+        cerr << "Error opening file" << endl;
         return 1;
     }
 
@@ -47,10 +40,10 @@ int main() {
     start = clock();
     insertion_sort(a);
     finish = clock();
-    est = (double)((finish - start) / CLOCKS_PER_SEC);
+    est = ((double) (finish - start) / CLOCKS_PER_SEC);
     // cout << "Array after sorting: " << endl;
     // printarr(a);
-    cout << "Input Size: " << a.size() << endl;
+    // cout << "Input Size: " << a.size() << endl;
     cout << "Time taken: " << est << endl;
     return 0;
 }

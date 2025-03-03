@@ -23,7 +23,7 @@ void insertion_sort(vector<long long>& a) {
 int main() {
     clock_t start, finish;
     double est;
-    ifstream inputFile("inputs_100Kdes.txt");
+    ifstream inputFile("inputs_50K.txt");
     if (!inputFile.is_open()) {
         cerr << "Error opening file" << endl;
         return 1;
@@ -44,6 +44,7 @@ int main() {
     // cout << "Array after sorting: " << endl;
     // printarr(a);
     // cout << "Input Size: " << a.size() << endl;
-    cout << "Time taken: " << est << endl;
+    printf("Time taken: %.2lf", est);
+    // cout << "Time taken: " << est << endl;
     return 0;
 }
